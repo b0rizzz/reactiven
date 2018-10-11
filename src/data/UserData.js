@@ -1,8 +1,10 @@
+const baseUrl = 'http://www.engrexapi.com';
+
 class UserData {
 
     static register(user) {
 
-        return window.fetch('http://www.engrexapi.com/register', {
+        return window.fetch(`${baseUrl}/register`, {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(user),
