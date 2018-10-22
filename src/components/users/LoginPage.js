@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LoginForm from './LoginForm';
 import userActions from '../../actions/UserActions';
 import userStore from '../../stores/UserStore';
+import './LoginPage.css';
 
 class LoginPage extends Component {
     constructor(props) {
@@ -51,7 +52,7 @@ class LoginPage extends Component {
 
     render() {
         return (
-            <div>
+            <div id="loginForm">
                 <h1>Login</h1>
                 <LoginForm
                     user={this.state.user}
