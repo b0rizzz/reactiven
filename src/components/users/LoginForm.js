@@ -20,7 +20,7 @@ const LoginForm = (props) => (
             onChange={props.onChange}
         />
             <br/>
-            <input type='submit' onClick={props.onSave} />
+            <input type='submit' value="Login" onClick={props.onSave} />
     </form>
 );
 

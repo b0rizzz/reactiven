@@ -8,3 +8,13 @@ export const url = (path='') => {
 
     return devUrl + path;
 };
+
+export const makeClasses = classes => {
+
+    if (Array.isArray(classes)) {
+
+        return classes.join(' ');
+    }
+
+    return classes;
+};

@@ -1,0 +1,11 @@
+.main {
+    width: 85%;
+    margin: 48px 0 0 15%;
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        margin: 0;
+    }
+}

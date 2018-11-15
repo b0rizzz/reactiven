@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LoginForm from './LoginForm';
 import userActions from '../../actions/UserActions';
 import userStore from '../../stores/UserStore';
+import Auth from './Auth';
 import './LoginPage.css';
 
 class LoginPage extends Component {
@@ -47,7 +48,11 @@ class LoginPage extends Component {
     }
 
     handleLogin(data) {
-        console.log(data);
+        
+        if(!data.error) {
+            Auth.authenticateUser(data._token);
+            this.props.history.push('/lessons');
+        }
     }
 
     render() {
