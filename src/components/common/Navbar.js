@@ -19,7 +19,7 @@ class Navbar extends Component {
                     className="active"
                     to="/"
                     onClick={this.handleClick}>
-                    Lessons
+                    Words and Phrases
                 </Link>
             </div>
         );
