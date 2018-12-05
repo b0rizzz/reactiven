@@ -1,6 +1,8 @@
 class Auth {
-    static authenticateUser(token) {
-        localStorage.setItem('_token', token);
+    static authenticateUser(data) {
+        let { email, _token } = data
+        localStorage.setItem('_token', _token);
+        localStorage.setItem('email', email);
     }
 
     static isUserAuthenticated() {
@@ -13,6 +15,10 @@ class Auth {
 
     static getToken() {
         return localStorage.getItem('_token');
+    }
+    
+    static getEmail() {
+        return localStorage.getItem('email');
     }
 }
 

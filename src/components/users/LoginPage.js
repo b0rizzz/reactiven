@@ -50,8 +50,8 @@ class LoginPage extends Component {
     handleLogin(data) {
         
         if(!data.error) {
-            Auth.authenticateUser(data._token);
-            this.props.history.push('/lessons');
+            Auth.authenticateUser(data);
+            this.props.history.push('/');
         }
     }
 
@@ -65,6 +65,12 @@ class LoginPage extends Component {
                     onSave={this.handleForm.bind(this)} />
             </div>
         )
+    }
+    
+    componentDidMount() {
+        if( Auth.isUserAuthenticated() ) {
+            this.props.history.push('/');
+        }
     }
 }
 

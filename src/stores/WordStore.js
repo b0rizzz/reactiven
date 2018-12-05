@@ -1,11 +1,11 @@
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher';
-import wordActions from '../actions/wordActions';
+import wordActions from '../actions/WordActions';
 import WordData from '../data/WordData';
 
 class WordStore extends EventEmitter {
     createWord(word) {
-        wordData
+        WordData
             .createWord(word)
             .then(data => this.emit(this.eventTypes.WORD_CREATED, data));
     }

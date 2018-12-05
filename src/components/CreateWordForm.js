@@ -1,0 +1,25 @@
+import React from 'react';
+
+const CreateWordForm = (props) => (
+    <form>
+        <label htmlFor='en'>en</label>
+        <input
+            type='text'
+            name='en'
+            value={props.word.en}
+            onChange={props.onChange}
+        />
+        <br />
+        <label htmlFor='bg'>bg</label>
+        <input
+            type='text'
+            name='bg'
+            value={props.word.bg}
+            onChange={props.onChange}
+        />
+            <br/>
+            <input type='submit' onClick={props.onSave} />
+    </form>
+);
+
+export default CreateWordForm;
