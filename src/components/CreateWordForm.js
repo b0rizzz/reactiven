@@ -17,8 +17,8 @@ const CreateWordForm = (props) => (
             value={props.word.bg}
             onChange={props.onChange}
         />
-            <br/>
-            <input type='submit' onClick={props.onSave} />
+        <br/>
+        <input type='submit' value="Save" onClick={props.onSave} />
     </form>
 );
 

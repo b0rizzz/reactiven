@@ -11,3 +11,7 @@
     clear: both;
     display: block;
 }
+
+.hidden {
+    display: none;
+}
