@@ -57,12 +57,14 @@ class LoginPage extends Component {
 
     render() {
         return (
-            <div id="loginForm">
-                <h1>Login</h1>
-                <LoginForm
-                    user={this.state.user}
-                    onChange={this.handleChange.bind(this)}
-                    onSave={this.handleForm.bind(this)} />
+            <div className="container">
+                <div id="loginForm">
+                    <h1>Login</h1>
+                    <LoginForm
+                        user={this.state.user}
+                        onChange={this.handleChange.bind(this)}
+                        onSave={this.handleForm.bind(this)} />
+                </div>
             </div>
         )
     }

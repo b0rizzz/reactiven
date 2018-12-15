@@ -72,14 +72,17 @@ class CreateWord extends Component {
         
         let successMessage = 'The word was successfully created.'
 
-        return (<div id="createWordForm">
+        return (
+            <div className="container">
+                <div id="createWordForm">
                     <h1>Create Word</h1>
                     <Success display={this.state.display} text={successMessage} closeAlert={this.handleCloseAlert.bind(this)} />
                     <CreateWordForm
                         word={this.state.word}
                         onChange={this.handleChange.bind(this)}
                         onSave={this.handleForm.bind(this)} />
-                </div>)
+                </div>
+            </div>)
     }
     
     componentDidMount() {
