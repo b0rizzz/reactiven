@@ -13,6 +13,7 @@ class CreateWord extends Component {
         this.state = {
             word: {
                 en: '',
+                transcription: '',
                 bg: '',
                 _token: '',
                 email: ''
@@ -57,6 +58,7 @@ class CreateWord extends Component {
         if (!data.error) {
             let {word} = this.state;
             word['en'] = '';
+            word['transcription'] = '';
             word['bg'] = '';
             
             this.setState({

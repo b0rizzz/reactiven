@@ -10,6 +10,14 @@ const CreateWordForm = (props) => (
             onChange={props.onChange}
         />
         <br />
+        <label htmlFor='transcription'>transcription</label>
+        <input
+            type='text'
+            name='transcription'
+            value={props.word.transcription}
+            onChange={props.onChange}
+        />
+        <br />
         <label htmlFor='bg'>bg</label>
         <input
             type='text'
