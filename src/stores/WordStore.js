@@ -10,11 +10,11 @@ class WordStore extends EventEmitter {
             .then(data => this.emit(this.eventTypes.WORD_CREATED, data));
     }
     
-    //~ login(user) {
-        //~ UserData
-            //~ .login(user)
-            //~ .then(data => this.emit(this.eventTypes.USER_LOGGEDIN, data));
-    //~ }
+    createPhrase(phrase) {
+        WordData
+            .createPhrase(phrase)
+            .then(data => this.emit(this.eventTypes.PHRASE_CREATED, data));
+    }
 
     handleAction(action) {
         switch (action.type) {
@@ -22,10 +22,10 @@ class WordStore extends EventEmitter {
                 this.createWord(action.word);
                 break;
             }
-            //~ case userActions.types.LOGIN_USER: {
-                //~ this.login(action.user);
-                //~ break;
-            //~ }
+            case wordActions.types.CREATE_PHRASE: {
+                this.createPhrase(action.phrase);
+                break;
+            }
             default: break;
         }
     }
@@ -35,7 +35,7 @@ let wordStore = new WordStore();
 
 wordStore.eventTypes = {
     WORD_CREATED: 'word_created',
-    //~ USER_LOGGEDIN: 'user_loggedin'
+    PHRASE_CREATED: 'phrase_created',
 };
 
 dispatcher.register(wordStore.handleAction.bind(wordStore));

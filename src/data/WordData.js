@@ -15,17 +15,18 @@ class WordData {
             }
         }).then(result => result.json());
     }
-    
-    //~ static login(user) {
-        //~ return window.fetch(`${baseUrl}/login`, {
-            //~ method: 'POST',
-            //~ mode: 'cors',
-            //~ body: JSON.stringify(user),
-            //~ headers: {
-                //~ "Content-Type": "application/x-www-form-urlencoded"
-            //~ }
-        //~ }).then(result => result.json());
-    //~ }
+
+    static createPhrase(phrase) {
+
+        return window.fetch(`${baseUrl}/phrases/store`, {
+            method: 'POST',
+            mode: 'cors',
+            body: JSON.stringify(phrase),
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
+        }).then(result => result.json());
+    } 
 }
 
 export default WordData;

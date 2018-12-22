@@ -3,20 +3,22 @@ import dispatcher from '../dispatcher';
 const WordActions = {
     types: {
         CREATE_WORD: 'CREATE_WORD',
-        //~ LOGIN_USER: 'LOGIN_USER'
+        CREATE_PHRASE: 'CREATE_PHRASE',
     },
+    
     createWord(word) {
         dispatcher.dispatch({
             type: this.types.CREATE_WORD,
             word
         })
     },
-    //~ login(user) {
-        //~ dispatcher.dispatch({
-            //~ type: this.types.LOGIN_USER,
-            //~ user
-        //~ })
-    //~ }
+    
+    createPhrase(phrase) {
+        dispatcher.dispatch({
+            type: this.types.CREATE_PHRASE,
+            phrase
+        })
+    },
 };
 
 export default WordActions;

@@ -19,6 +19,7 @@
     background-color: #111;
 }
 
+/*
 @media only screen and (max-width: 768px) {
     .header {
         padding: 0;
@@ -26,4 +27,4 @@
     .header > a {
         display: block;
     }
-}
+}*/
