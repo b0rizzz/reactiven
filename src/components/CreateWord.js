@@ -15,6 +15,7 @@ class CreateWord extends Component {
                 en: '',
                 transcription: '',
                 bg: '',
+                level: '',
                 _token: '',
                 email: ''
             },
@@ -43,7 +44,17 @@ class CreateWord extends Component {
         const field = target.name;
         const value = target.value;
         const {word} = this.state;
-        word[field] = value;
+        
+        if (field === 'level' && value !== '') {
+            let level = parseInt(value);
+            
+            if ( level <= 5 && level > 0) {
+                word[field] = level;
+            }
+            
+        } else {
+            word[field] = value;
+        }
 
         this.setState({ word });
     }
@@ -60,6 +71,7 @@ class CreateWord extends Component {
             word['en'] = '';
             word['transcription'] = '';
             word['bg'] = '';
+            word['level'] = '';
             
             this.setState({
                 display: '',

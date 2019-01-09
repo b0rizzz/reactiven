@@ -9,6 +9,8 @@ const CreateWordForm = (props) => (
         <br />
         <Input type='text' name='bg' autocapitalize='off' value={props.word.bg} onChange={props.onChange} />
         <br/>
+        <Input type='number' name='level' value={props.word.level} onChange={props.onChange} />
+        <br/>
         <input type='submit' value="Save" onClick={props.onSave} />
     </form>
 );
