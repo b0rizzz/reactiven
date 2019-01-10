@@ -3,11 +3,11 @@ import Input from './forms/Input';
 
 const CreateWordForm = (props) => (
     <form>
-        <Input type='text' name='en' autocapitalize='off' value={props.word.en} onChange={props.onChange} />
+        <Input type='text' name='en' value={props.word.en} onChange={props.onChange} />
         <br />
-        <Input type='text' name='transcription' autocapitalize='off' value={props.word.transcription} onChange={props.onChange} />
+        <Input type='text' name='transcription' value={props.word.transcription} onChange={props.onChange} />
         <br />
-        <Input type='text' name='bg' autocapitalize='off' value={props.word.bg} onChange={props.onChange} />
+        <Input type='text' name='bg' value={props.word.bg} onChange={props.onChange} />
         <br/>
         <Input type='number' name='level' value={props.word.level} onChange={props.onChange} />
         <br/>

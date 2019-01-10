@@ -5,6 +5,7 @@ const Input  = (props) => (
         {props.name}
         <input
             type={props.type}
+            autocapitalize="off"
             name={props.name}
             value={props.value}
             onChange={props.onChange} 
